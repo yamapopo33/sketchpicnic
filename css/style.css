@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/* 共通部分
+------------------------------- */
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+
+  line-height: 1.7;
+  color: #432;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+/*.logo {
+  width: 80px;
+  margin-top: 14px;
+}*/
+.main-nav {
+  display: flex;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+.main-nav li {
+  margin-left: 36px;
+}
+.main-nav a {
+  color: #fcf1f1;
+  /* -webkit-text-stroke: 1.2px #432; /* ベンダープレフィックス */
+  background-color: rgb(68, 51, 34, 0.9);
+  padding: 2%;
+  border-radius: 5px;
+}
+.main-nav a:hover {
+  color: #d4093c;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+/*HOME
+----------------------------*/
+.home-content {
+  text-align: center;
+  margin-top: 5%;
+}
+
+/*見出し(Sketch Picnic)
+----------------------------*/
+
+.page-title {
+  font-size: 6rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #432;
+}
+
+#home {
+  background-image: url(../images/akiba.jpg);
+  height: 550px;
+  margin-bottom: 40px;
+  background-position: 50% 50%;
+}
+#home .page-title {
+  text-transform: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px 20px 0px 0px;
+}
+.page-subtitle {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0px 0px 20px 20px;
+  padding-bottom: 3%;
+  font-size: 2.2rem;
+}
+/*作品タイル型レイアウト
+----------------------------*/
+.works {
+  font-size: 3rem;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+
+  margin-top: 6%;
+}
+.grid {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 100px;
+  margin-top: 2%;
+  margin-bottom: 50px;
+}
+.item {
+  color: #432;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  text-align: center;
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: none;
+    object-position: 38% 62%;
+  }
+}
+/*--作品タイル型レイアウトここまで---------*/
+
+/* ---SNS ここから--------------------*/
+
+#sns {
+  background: #fff8cf;
+  padding: 4% 0;
+}
+#sns .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#sns .sub-title {
+  margin-bottom: 30px;
+  border-bottom: #7fd9d2 solid;
+}
+.sns-box {
+  width: 30%;
+}
+/* iframe */
+iframe {
+  width: 100%;
+}
+/* ---SNS ここまで--------------------*/
+
+/* ---お問い合わせ ここから--------------------*/
+.button {
+  font-size: 1.375rem;
+  background: #e45578;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 18px;
+}
+.button:hover {
+  background: #d4093c;
+}
+form div {
+  
+  margin-bottom: 14px;
+}
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  background: rgb(208, 238, 255);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  max-width: 300px;
+}
+textarea {
+  width: 100%;
+  max-width: 550px;
+  height: 6rem;
+}
+input[type="submit"] {border: :none;
+cursor: pointer;
+line-height: 1;}
+/* ---お問い合わせ ここまで--------------------*/
+
+/*---------トップに戻るボタン　ここから---------*/
+#pagetop {
+    display: block;
+    font-weight: bold;
+    padding: .6em;
+    text-align: center;
+    font-size: 1.2rem;
+    background: #fff; /*背景色*/
+    color: #432; /*文字色*/
+    
+    margin-top: 130px;
+    
+}
+/***マウスオーバー時***/
+#pagetop:hover {
+    background: #fff; /*背景色*/
+    color: #d4093c; /*文字色*/
+}
+/*.homeicon {
+  width: 80px;
+
+  position:relative;
+  right: 100px
+}
+/*---------トップに戻るボタン　ここまで---------*/
+
+
+
+/*フッター
+----------------------------*/
+footer {
+  background: #7fd9d2;
+  text-align: center;
+  padding: 26px 0;
+  margin-top: 100px;
+}
+footer p {
+  color: #432;
+  font-size: 1rem;
+  
+}
+
+/*フッター　ここまで
+----------------------------*/
+
+/*モバイル版　ここから
+----------------------------*/
+@media (max-width: 600px) {
+.main-nav {font-size: 1rem;margin-top: 10px;}
+.main-nav li {margin-top: 20%;}
+.works {grid-column: auto;grid-row: auto;}
+.works img {height: auto;}}
+
+/*モバイル版　ここまで
+----------------------------*/
